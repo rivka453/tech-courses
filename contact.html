@@ -1,76 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <title>צור קשר</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f6f1f9;
-            margin: 0;
-            padding: 0;
-            direction: rtl;
+            background-color: #f7efff;
+            color: #360068;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
         }
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            background-color: white;
-            padding: 30px;
+        form {
+            background: white;
+            padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #5e2b97;
+            box-shadow: 0 0 10px #aaa;
+            max-width: 400px;
+            width: 100%;
         }
         label {
             display: block;
-            margin-top: 15px;
+            margin-top: 10px;
         }
         input, textarea {
             width: 100%;
-            padding: 10px;
+            padding: 8px;
             margin-top: 5px;
-            border: 1px solid #ccc;
             border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
         }
         button {
-            background-color: #5e2b97;
+            margin-top: 15px;
+            background-color: #8000aa;
             color: white;
-            padding: 10px 20px;
             border: none;
+            padding: 10px;
             border-radius: 5px;
-            margin-top: 20px;
+            font-size: 1em;
             cursor: pointer;
-            width: 100%;
         }
-        .info {
-            margin-top: 30px;
-            text-align: center;
-            color: #555;
+        button:hover {
+            background-color: #5e0080;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>צור קשר</h1>
-        <form action="mailto:rivkazdk@gmail.com" method="post" enctype="text/plain">
-            <label for="name">שם מלא</label>
-            <input type="text" name="name" required />
+    <h2>צור קשר</h2>
+    <form action="https://formspree.io/f/xwpbolal" method="POST">
+        <label for="name">שם מלא:</label>
+        <input type="text" id="name" name="name" required>
 
-            <label for="email">אימייל</label>
-            <input type="email" name="email" required />
+        <label for="email">אימייל:</label>
+        <input type="email" id="email" name="email" required>
 
-            <label for="message">הודעה</label>
-            <textarea name="message" rows="5" required></textarea>
+        <label for="message">ההודעה שלך:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-            <button type="submit">שלח הודעה</button>
-        </form>
-        <div class="info">
-            ניתן גם לפנות בטלפון: <strong>054-847-5038</strong><br />
-            או במייל: <strong>rivkazdk@gmail.com</strong>
-        </div>
-    </div>
+        <button type="submit">שלח</button>
+    </form>
 </body>
 </html>
