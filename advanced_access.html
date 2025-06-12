@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>קורס אקסל למתקדמים</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8ff;
+      direction: rtl;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    input[type="password"] {
+      padding: 10px;
+      width: 80%;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #6a5acd;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #message {
+      margin-top: 20px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>קורס אקסל למתקדמים</h1>
+    <p>לצפייה בשיעורים – יש לבצע העברה בנקאית.<br>פרטי התשלום ישלחו לאחר פנייה אישית.</p>
+    <p>לאחר ביצוע התשלום, אנא הזינו את הקוד הסודי שקיבלתם:</p>
+    <input type="password" id="password" placeholder="הזן קוד סודי">
+    <br>
+    <button onclick="checkPassword()">כניסה לקורס</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      var input = document.getElementById('password').value;
+      if (input === "Pro2025") {
+        window.location.href = "advanced/lesson1.html";
+      } else {
+        document.getElementById('message').innerText = "הקוד שגוי. נסו שוב.";
+      }
+    }
+  </script>
+</body>
+</html>
